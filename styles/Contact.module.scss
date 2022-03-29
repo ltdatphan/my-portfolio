@@ -1,0 +1,22 @@
+
+.socialLinks {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    justify-items: center;
+
+    a {
+        display: inline-block;
+        transition: all .2s ease-in-out;
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .socialLinks {
+        width: 40%;
+    }
+}
