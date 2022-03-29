@@ -33,7 +33,7 @@ export default function Projects() {
           />
         </div>
         <h2 className={styles.seeMore}>Want to see my other projects?</h2>
-        <a className={generalStyles.primaryBtn}>Visit my Github &#8599;</a>
+        <a href="https://github.com/ltdatphan" target="_blank" rel="noopener noreferrer" className={generalStyles.primaryBtn}>Visit my Github &#8599;</a>
       </SectionTemplate>
     </>
   );
