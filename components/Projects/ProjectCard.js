@@ -27,6 +27,7 @@ export default function ProjectCard({
                 href={githubLink}
                 className={generalStyles.primaryBtn}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 View on Github &#8599;
               </a>
@@ -37,6 +38,7 @@ export default function ProjectCard({
                 href={liveVerLink}
                 className={generalStyles.primaryBtn}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 View Live Demo &#8599;
               </a>

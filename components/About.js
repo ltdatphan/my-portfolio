@@ -7,18 +7,19 @@ export default function Layout() {
     <>
       <SectionTemplate title="About" hash="about">
         <p className={styles.aboutMeText}>
-          I'm a fourth-year Computer Science student at Ryerson University and
+          I&apos;m a fourth-year Computer Science student at Ryerson University and
           currently working my co-op term at{" "}
           <span className={styles.externalLink}>
             <a
               href="https://www.linkedin.com/company/aviaproconsulting/"
               target="_blank"
+              rel="noopener noreferrer"
               className={generalStyles.underlineLinksDark}
             >
               AviaPro Consulting Inc. &#8599;
             </a>
           </span>{" "}
-          as a Software Development Intern. I'm excited to learn new
+          as a Software Development Intern. I&apos;m excited to learn new
           technologies and wish to refine my skills as a developer.
         </p>
       </SectionTemplate>

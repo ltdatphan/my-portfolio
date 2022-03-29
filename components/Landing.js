@@ -10,7 +10,7 @@ export default function Landing() {
         <div className={styles.hero}>
           <div className={styles.heroText}>
             <h1 className={styles.typeEffect}>
-              Hi I'm David 👋
+              Hi I&apos;m David 👋
               <br />
               Welcome to my website.
             </h1>
