@@ -16,7 +16,7 @@ export default function Layout() {
               rel="noopener noreferrer"
               className={generalStyles.underlineLinksDark}
             >
-              AviaPro Consulting Inc. &#8599;
+              AviaPro Consulting Inc. ↗&#xFE0E;
             </a>
           </span>{" "}
           as a Software Development Intern. I&apos;m excited to learn new

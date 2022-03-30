@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import styles from "@/styles/Cards.module.scss";
 import generalStyles from "@/styles/General.module.scss";
 
@@ -11,17 +13,18 @@ export default function ProjectCard({
 }) {
   return (
     <>
-      <div className={styles.expCardBody}>
-        <div className={styles.expCardImageContainer}>
-          <img src={imageSrc} width="100%" height="auto"></img>
+      <div className={styles.cardBody}>
+        <div className={styles.cardImageContainer}>
+          {/* <img src={imageSrc} width="100%" height="auto"></img> */}
+          <Image src={imageSrc} layout="fill" />
         </div>
-        <div className={styles.expCardContent}>
-          <div className={styles.expCardTextContent}>
+        <div className={styles.cardContent}>
+          <div className={styles.cardTextContent}>
             <h2>{projectName}</h2>
             <span>{technology}</span>
             <p>{description}</p>
           </div>
-          <div className={styles.projCardLinks}>
+          <div className={styles.cardLinks}>
             {githubLink ? (
               <a
                 href={githubLink}
@@ -29,7 +32,7 @@ export default function ProjectCard({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View on Github &#8599;
+                View on Github ↗&#xFE0E;
               </a>
             ) : null}
 
@@ -40,7 +43,7 @@ export default function ProjectCard({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Live Demo &#8599;
+                View Live Demo ↗&#xFE0E;
               </a>
             ) : null}
           </div>

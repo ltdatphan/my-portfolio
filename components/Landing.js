@@ -16,11 +16,11 @@ export default function Landing() {
             </h1>
           </div>
           <div className={styles.imageContainer}>
-            <img src="/peep.svg" width="100%" height="100%" />
+            <Image src="/peep.svg" layout="fill" />
           </div>
         </div>
         <a href="#about" className={generalStyles.primaryBtn}>
-          Learn more &#8595;
+          Learn more ↓&#xFE0E;
         </a>
       </div>
     </section>

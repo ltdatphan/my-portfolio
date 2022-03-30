@@ -17,7 +17,8 @@
 .hero {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-rows: 30% 70%;
+  height: 80vh;
 }
 
 .heroText {
@@ -30,13 +31,15 @@
 }
 
 .imageContainer {
-  padding: 0 5%;
-  height: 50vh;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .hero {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
 
   .heroText {
@@ -44,9 +47,5 @@
     align-items: center;
     height: auto;
     padding-left: 30%;
-  }
-
-  .imageContainer {
-    height: 80vh;
   }
 }

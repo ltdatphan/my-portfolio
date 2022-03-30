@@ -15,6 +15,11 @@ export default function Home() {
         <title>David Phan | Portfolio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="David Phan | Portfolio" />
+        <meta property="og:description" content="Hi I'm David. Welcome to my website!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="www.davidphan.dev" />
+        <meta property="og:imgage" content="/render.png" />
       </Head>
 
       <Layout>
