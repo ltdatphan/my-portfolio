@@ -19,7 +19,7 @@ export default function Home() {
         <meta property="og:description" content="Hi I'm David. Welcome to my website!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="www.davidphan.dev" />
-        <meta property="og:imgage" content="/render.png" />
+        <meta property="og:image" content="/render.png" />
       </Head>
 
       <Layout>

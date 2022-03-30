@@ -6,8 +6,7 @@ export default function Card({ imageSrc, imageAlt, companyName, roleName, workPe
     <>
       <div className={styles.cardBody}>
         <div className={styles.cardImageContainer}>
-          {/* <img src={imageSrc} width="100%" height="auto"></img> */}
-          <Image src={imageSrc} alt={imageAlt} layout="fill" />
+          <Image src={imageSrc} alt={imageAlt} layout="fill" priority/>
         </div>
         <div className={styles.cardContent}>
           <div className={styles.cardTextContent}>
