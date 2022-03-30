@@ -5,6 +5,7 @@ import generalStyles from "@/styles/General.module.scss";
 
 export default function ProjectCard({
   imageSrc,
+  imageAlt,
   projectName,
   technology,
   description,
@@ -16,7 +17,7 @@ export default function ProjectCard({
       <div className={styles.cardBody}>
         <div className={styles.cardImageContainer}>
           {/* <img src={imageSrc} width="100%" height="auto"></img> */}
-          <Image src={imageSrc} layout="fill" />
+          <Image src={imageSrc} alt={imageAlt} layout="fill" />
         </div>
         <div className={styles.cardContent}>
           <div className={styles.cardTextContent}>

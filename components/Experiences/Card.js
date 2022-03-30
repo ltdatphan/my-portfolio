@@ -1,13 +1,13 @@
 import Image from "next/image";
 import styles from "@/styles/Cards.module.scss";
 
-export default function Card({ imageSrc, companyName, roleName, workPeriod }) {
+export default function Card({ imageSrc, imageAlt, companyName, roleName, workPeriod }) {
   return (
     <>
       <div className={styles.cardBody}>
         <div className={styles.cardImageContainer}>
           {/* <img src={imageSrc} width="100%" height="auto"></img> */}
-          <Image src={imageSrc} layout="fill" />
+          <Image src={imageSrc} alt={imageAlt} layout="fill" />
         </div>
         <div className={styles.cardContent}>
           <div className={styles.cardTextContent}>
