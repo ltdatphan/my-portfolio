@@ -1,14 +1,14 @@
 import SectionTemplate from "../SectionTemplate";
 import Card from "./Card";
 import styles from "@/styles/Experiences.module.scss";
-import Fade from "react-reveal/Fade";
+import { Slide } from "react-awesome-reveal";
 
 export default function Experiences() {
   return (
     <>
       <SectionTemplate title="Experiences" hash="experiences">
-        <Fade left>
-          <div className={styles.cardsContainer}>
+        <div className={styles.cardsContainer}>
+          <Slide direction="up" style={{ width: "100%" }} triggerOnce>
             <Card
               imageSrc="/aviapro_logo.png"
               imageAlt="AviaPro logo"
@@ -16,6 +16,8 @@ export default function Experiences() {
               roleName="Software Development Intern"
               workPeriod="Sep 2021 - Current"
             />
+          </Slide>
+          <Slide direction="up" style={{ width: "100%" }} delay={250}triggerOnce>
             <Card
               imageSrc="/CAAT_Logo_EN.svg"
               imageAlt="CATT logo"
@@ -23,8 +25,8 @@ export default function Experiences() {
               roleName="Software Development Intern"
               workPeriod="May 2021 - Aug 2021"
             />
-          </div>
-        </Fade>
+          </Slide>
+        </div>
       </SectionTemplate>
     </>
   );
