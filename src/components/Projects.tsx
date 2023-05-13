@@ -41,7 +41,12 @@ export default function Projects() {
       <h2 className="text-lg font-semibold mb-3 px-3">Projects</h2>
       <div className="flex flex-col space-y-6">
         {job_detail.map((proj, index) => (
-          <a href={proj.link} referrerPolicy="no-referrer" target="_blank">
+          <a
+            href={proj.link}
+            referrerPolicy="no-referrer"
+            target="_blank"
+            key={index}
+          >
             <div
               className="group flex flex-col md:flex-row content-center justify-between p-3 hover:bg-stone-100 hover:shadow-xl hover:scale-105 hover:transition-all ease-in-out duration-200"
               key={index}

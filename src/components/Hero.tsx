@@ -32,11 +32,12 @@ export default function Hero() {
           <TextTransition inline={true} springConfig={presets.gentle}>
             {greetings[index % greetings.length]}
           </TextTransition>
-          , I'm David!
+          , I&#39;m David!
         </div>
         <div className="flex flex-col text-lg md:text-xl font-regular">
           <p className="mb-10">
-            I'm a Software Developer 👨‍💻 <br /> upcoming CS graduate at TMU 🎓
+            I&#39;m a Software Developer 👨‍💻 <br /> upcoming CS graduate at TMU
+            🎓
           </p>
           <Socials />
         </div>

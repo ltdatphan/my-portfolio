@@ -36,7 +36,12 @@ export default function Experience() {
       <h2 className="text-lg font-semibold mb-3 px-3">Experience</h2>
       <div className="flex flex-col space-y-6">
         {job_detail.map((job, index) => (
-          <a href={job.link} target="_blank" referrerPolicy="no-referrer">
+          <a
+            href={job.link}
+            target="_blank"
+            referrerPolicy="no-referrer"
+            key={index}
+          >
             <div
               className="group flex flex-row content-center justify-between hover:bg-stone-100 hover:shadow-xl hover:scale-105 hover:transition-all ease-in-out duration-200 p-3"
               key={index}
