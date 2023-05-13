@@ -48,7 +48,7 @@ export default function Projects() {
             key={index}
           >
             <div
-              className="group flex flex-col md:flex-row content-center justify-between p-3 hover:bg-stone-100 hover:shadow-xl hover:scale-105 hover:transition-all ease-in-out duration-200"
+              className="group flex flex-col md:flex-row content-center justify-between p-3 hover:bg-stone-100 hover:shadow-xl md:hover:scale-105 hover:transition-all ease-in-out duration-200"
               key={index}
             >
               <div className="w-full md:w-1/4">

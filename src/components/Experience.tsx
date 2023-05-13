@@ -43,7 +43,7 @@ export default function Experience() {
             key={index}
           >
             <div
-              className="group flex flex-row content-center justify-between hover:bg-stone-100 hover:shadow-xl hover:scale-105 hover:transition-all ease-in-out duration-200 p-3"
+              className="group flex flex-row content-center justify-between hover:bg-stone-100 hover:shadow-xl md:hover:scale-105 hover:transition-all ease-in-out duration-200 p-3"
               key={index}
             >
               <div className="w-1/4">
