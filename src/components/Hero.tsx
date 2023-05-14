@@ -26,7 +26,7 @@ export default function Hero() {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <section className="h-full w-full md:max-w-3xl mx-auto px-4 py-10 mt-20">
+    <section className="h-[65vh] w-full md:max-w-3xl mx-auto px-4 py-10 mt-20">
       <div className="flex flex-col">
         <div className="text-3xl md:text-5xl font-bold flex flex-row font-serif mb-3 md:mb-6">
           <TextTransition inline={true} springConfig={presets.gentle}>

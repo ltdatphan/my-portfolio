@@ -26,20 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        {/* <link
-          rel="preconnect"
-          href="https://ka-f.fontawesome.com"
-          crossOrigin="anonymous"
-        ></link>
-        <script
-          async
-          defer
-          src="https://kit.fontawesome.com/7b916875b1.js"
-          crossOrigin="anonymous"
-          rel="preload"
-        ></script> */}
-      </head>
+      <head></head>
       <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
         {children}
       </body>
