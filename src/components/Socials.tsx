@@ -7,7 +7,10 @@ export default function Socials() {
         target="_blank"
         aria-label="Email link"
       >
-        <i className="fa-solid fa-at fa-lg hover:text-blue-500"></i>
+        <i
+          className="fa-solid fa-at fa-lg hover:text-blue-500"
+          rel="preload"
+        ></i>
       </a>
       <a
         href="https://github.com/ltdatphan"
@@ -15,7 +18,10 @@ export default function Socials() {
         target="_blank"
         aria-label="Github link"
       >
-        <i className="fa-brands fa-github fa-lg hover:text-blue-500"></i>
+        <i
+          className="fa-brands fa-github fa-lg hover:text-blue-500"
+          rel="preload"
+        ></i>
       </a>
       <a
         href="https://www.linkedin.com/in/ltdatphan/"
@@ -23,7 +29,10 @@ export default function Socials() {
         target="_blank"
         aria-label="LinkedIn link"
       >
-        <i className="fa-brands fa-linkedin fa-lg hover:text-blue-500"></i>
+        <i
+          className="fa-brands fa-linkedin fa-lg hover:text-blue-500"
+          rel="preload"
+        ></i>
       </a>
     </div>
   );

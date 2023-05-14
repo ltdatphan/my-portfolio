@@ -19,7 +19,7 @@ module.exports = {
         },
       },
       animation: {
-        reveal: "reveal 1.25s ease-in-out",
+        reveal: "reveal 0.75s ease-in-out",
       },
     },
   },

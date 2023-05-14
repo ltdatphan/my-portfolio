@@ -22,7 +22,7 @@ const job_detail = [
 export default function Experience() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "10% 0%",
+    rootMargin: "0% 0%",
   });
 
   return (

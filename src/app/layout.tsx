@@ -20,6 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <head>
+        <link
+          rel="preconnect"
+          href="https://ka-f.fontawesome.com"
+          crossOrigin="anonymous"
+        ></link>
         <script
           async
           defer
@@ -35,11 +40,6 @@ export default function RootLayout({
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com/"
-          crossOrigin="anonymous"
-        ></link>
-        <link
-          rel="preconnect"
-          href="https://ka-f.fontawesome.com"
           crossOrigin="anonymous"
         ></link>
       </head>
