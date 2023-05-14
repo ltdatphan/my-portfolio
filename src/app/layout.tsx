@@ -27,6 +27,21 @@ export default function RootLayout({
           crossOrigin="anonymous"
           rel="preload"
         ></script>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com/"
+          crossOrigin="anonymous"
+        ></link>
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com/"
+          crossOrigin="anonymous"
+        ></link>
+        <link
+          rel="preconnect"
+          href="https://ka-f.fontawesome.com"
+          crossOrigin="anonymous"
+        ></link>
       </head>
       <body>{children}</body>
     </html>

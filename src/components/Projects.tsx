@@ -55,7 +55,7 @@ export default function Projects() {
                 <Image
                   src={proj.imagePath}
                   fill
-                  alt="MedSuite"
+                  alt={proj.name}
                   className="filter group-hover:brightness-125 object-contain"
                 />
               </div>
