@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 const jobs_detail = [

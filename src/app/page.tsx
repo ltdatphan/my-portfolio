@@ -1,8 +1,17 @@
-"use client";
+import dynamic from "next/dynamic";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
-import Experience from "@/components/Experience";
-import Projects from "@/components/Projects";
+
+const DynamicExperience = dynamic(() => import("@/components/Experience"), {
+  loading: () => <p>Loading...</p>,
+});
+
+const DynamicProjects = dynamic(() => import("@/components/Projects"), {
+  loading: () => <p>Loading...</p>,
+});
+
+// import Experience from "@/components/Experience";
+// import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,8 +19,10 @@ export default function Home() {
     <main className="font-sans">
       <NavBar />
       <Hero />
-      <Experience />
-      <Projects />
+      {/* <Experience /> */}
+      <DynamicExperience />
+      {/* <Projects /> */}
+      <DynamicProjects />
       <Footer />
     </main>
   );
