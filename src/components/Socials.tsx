@@ -5,6 +5,7 @@ export default function Socials() {
         href="mailto:ltdatphan@gmail.com"
         referrerPolicy="no-referrer"
         target="_blank"
+        aria-label="Email link"
       >
         <i className="fa-solid fa-at fa-lg hover:text-blue-500"></i>
       </a>
@@ -12,6 +13,7 @@ export default function Socials() {
         href="https://github.com/ltdatphan"
         referrerPolicy="no-referrer"
         target="_blank"
+        aria-label="Github link"
       >
         <i className="fa-brands fa-github fa-lg hover:text-blue-500"></i>
       </a>
@@ -19,6 +21,7 @@ export default function Socials() {
         href="https://www.linkedin.com/in/ltdatphan/"
         referrerPolicy="no-referrer"
         target="_blank"
+        aria-label="LinkedIn link"
       >
         <i className="fa-brands fa-linkedin fa-lg hover:text-blue-500"></i>
       </a>

@@ -51,13 +51,12 @@ export default function Projects() {
               className="group flex flex-col md:flex-row content-center justify-between p-3 hover:bg-stone-100 hover:shadow-xl md:hover:scale-105 hover:transition-all ease-in-out duration-200"
               key={index}
             >
-              <div className="w-full md:w-1/4">
+              <div className="w-full md:w-1/4 relative">
                 <Image
                   src={proj.imagePath}
-                  width={800}
-                  height={500}
+                  fill
                   alt="MedSuite"
-                  className="filter group-hover:brightness-125"
+                  className="filter group-hover:brightness-125 object-contain"
                 />
               </div>
               <div className="pt-3 md:pt-0 md:w-2/3">
