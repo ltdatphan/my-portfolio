@@ -34,8 +34,8 @@ export default function Hero() {
           </TextTransition>
           , I&#39;m David!
         </div>
-        <div className="flex flex-col text-lg md:text-xl font-regular">
-          <p className="mb-10">
+        <div className="flex flex-col text-lg md:text-xl font-regular space-y-12">
+          <p>
             I&#39;m a Software Developer 👨‍💻 <br /> upcoming CS graduate at TMU
             🎓
           </p>
