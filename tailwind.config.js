@@ -8,9 +8,32 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"IBM Plex Serif"', "serif"], // Ensure fonts with spaces have " " surrounding it.
-        sans: ["var(--font-inter)"],
-        mono: ["var(--font-roboto-mono)"],
+        serif: [
+          "var(--font-ibm-plex-serif)",
+          "ui-serif",
+          "Georgia",
+          "Cambria",
+          "Times New Roman",
+          "Times",
+          "serif",
+        ], // Ensure fonts with spaces have " " surrounding it.
+        sans: [
+          "var(--font-inter)",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "Noto Sans",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
+        ],
       },
       keyframes: {
         reveal: {
@@ -19,7 +42,7 @@ module.exports = {
         },
       },
       animation: {
-        reveal: "reveal 0.75s ease-in-out",
+        reveal: "reveal 0.45s ease-in-out",
       },
     },
   },

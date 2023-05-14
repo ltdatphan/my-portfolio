@@ -1,10 +1,17 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, IBM_Plex_Serif } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+});
+
+const ibmPlexSerif = IBM_Plex_Serif({
+  subsets: ["latin"],
+  weight: "700",
+  display: "swap",
+  variable: "--font-ibm-plex-serif",
 });
 
 export const metadata = {
@@ -18,9 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
+    <html lang="en">
       <head>
-        <link
+        {/* <link
           rel="preconnect"
           href="https://ka-f.fontawesome.com"
           crossOrigin="anonymous"
@@ -31,19 +38,11 @@ export default function RootLayout({
           src="https://kit.fontawesome.com/7b916875b1.js"
           crossOrigin="anonymous"
           rel="preload"
-        ></script>
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com/"
-          crossOrigin="anonymous"
-        ></link>
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com/"
-          crossOrigin="anonymous"
-        ></link>
+        ></script> */}
       </head>
-      <body>{children}</body>
+      <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
