@@ -28,7 +28,7 @@ export default function Experience() {
 
   return (
     <section
-      className={`h-full w-full md:max-w-3xl mx-auto px-0 py-5 ${
+      className={`h-[90vh] md:h-[80vh] w-full md:max-w-3xl mx-auto px-0 py-5 ${
         inView ? "animate-reveal" : "opacity-0"
       }`}
       id="experience"

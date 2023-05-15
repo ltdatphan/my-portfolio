@@ -1,7 +1,10 @@
 "use client";
 import Link from "next/link";
+import { EventHandler, MouseEventHandler } from "react";
 export default function NavBar() {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleScroll: MouseEventHandler = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
     // first prevent the default behavior
     e.preventDefault();
     // get the href and remove everything before the hash (#)
@@ -18,7 +21,6 @@ export default function NavBar() {
       behavior: "smooth",
     });
   };
-
   return (
     <nav id="header" className="sticky w-full z-10 top-0">
       <div className="w-full h-14 md:h-20 bg-white justify-center border-b border-gray-200">
