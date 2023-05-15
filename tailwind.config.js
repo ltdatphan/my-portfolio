@@ -40,9 +40,14 @@ module.exports = {
           "0%": { transform: "translateY(100%)", opacity: "0", blur: "10px" },
           "100%": { transform: "translateY(0)", opacity: "1", blur: "0px" },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
-        reveal: "reveal 0.45s ease-in-out",
+        reveal: "reveal 0.65s ease-in-out",
+        fadeIn: "fadeIn 1.25s ease-in-out",
       },
     },
   },

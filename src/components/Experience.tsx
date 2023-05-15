@@ -23,22 +23,22 @@ const job_detail = [
 export default function Experience() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "-20% 0%",
+    rootMargin: "-15% 0%",
   });
 
   return (
     <section
-      className={`h-full w-full md:max-w-3xl mx-auto px-0 py-10 ${
+      className={`h-full w-full md:max-w-3xl mx-auto px-0 py-5 ${
         inView ? "animate-reveal" : "opacity-0"
       }`}
       id="experience"
       ref={ref}
     >
-      <h2 className="text-lg font-semibold mb-3 px-3">Experience</h2>
+      <h2 className="text-lg font-semibold px-3">Experience</h2>
       <div className="flex flex-col space-y-6">
         {job_detail.map((job, index) => (
           <div
-            className="group flex flex-row content-center justify-between hover:bg-stone-100 hover:shadow-xl md:hover:scale-105 hover:transition-all ease-in-out duration-200 p-3"
+            className="group flex flex-row content-center justify-between hover:bg-stone-100 md:hover:shadow-lg md:hover:scale-105 hover:transition-all ease-in-out duration-200 p-3"
             key={index}
           >
             <div className="w-1/4">

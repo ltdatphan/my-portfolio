@@ -26,8 +26,8 @@ export default function Hero() {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <section className="h-[65vh] w-full md:max-w-3xl mx-auto px-4 py-10 mt-20">
-      <div className="flex flex-col">
+    <section className="h-[85vh] w-full md:max-w-3xl mx-auto px-4 py-10 mt-20">
+      <div className="flex flex-col h-full animate-fadeIn">
         <div className="text-3xl md:text-5xl font-bold flex flex-row font-serif mb-3 md:mb-6">
           <TextTransition inline={true} springConfig={presets.gentle}>
             {greetings[index % greetings.length]}
@@ -36,10 +36,19 @@ export default function Hero() {
         </div>
         <div className="flex flex-col text-lg md:text-xl font-regular space-y-6 md:space-y-10">
           <p>
-            I&#39;m a Software Developer 👨‍💻 <br /> upcoming CS graduate at TMU
+            I&#39;m a Software Developer 👨‍💻 <br /> & upcoming CS graduate at TMU
             🎓
           </p>
           <Socials />
+        </div>
+        <div className="h-full flex flex-col justify-end items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            className="h-8 w-8 fill-gray-600 animate-bounce"
+          >
+            <path d="M233 407c13 12 33 12 46 0l192-192a32 32 0 0 0-46-46L256 339 87 169a32 32 0 0 0-46 46l192 192z" />
+          </svg>
         </div>
       </div>
     </section>

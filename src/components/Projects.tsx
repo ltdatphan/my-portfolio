@@ -28,7 +28,7 @@ const jobs_detail = [
 export default function Projects() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "-5% 0%",
+    rootMargin: "-10% 0%",
   });
 
   return (
@@ -39,11 +39,11 @@ export default function Projects() {
       id="projects"
       ref={ref}
     >
-      <h2 className="text-lg font-semibold mb-3 px-3">Projects</h2>
+      <h2 className="text-lg font-semibold px-3">Projects</h2>
       <div className="flex flex-col space-y-6">
         {jobs_detail.map((proj, index) => (
           <div
-            className="group flex flex-col md:flex-row content-center justify-between p-3 hover:bg-stone-100 hover:shadow-xl md:hover:scale-105 hover:transition-all ease-in-out duration-200"
+            className="group flex flex-col md:flex-row content-center justify-between p-3 hover:bg-stone-100 md:hover:shadow-lg md:hover:scale-105 hover:transition-all ease-in-out duration-200"
             key={index}
           >
             <div className="w-full md:w-1/4 relative">
@@ -52,7 +52,7 @@ export default function Projects() {
                   src={proj.imagePath}
                   fill
                   alt={proj.name}
-                  className="filter group-hover:brightness-125 object-contain"
+                  className="filter group-hover:saturate-200 group-hover:brightness-110 object-contain"
                 />
               </a>
             </div>
