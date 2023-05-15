@@ -46,7 +46,7 @@ export default function Projects() {
             className="group flex flex-col md:flex-row content-center justify-between p-3 hover:bg-stone-100 md:hover:shadow-lg md:hover:scale-105 hover:transition-all ease-in-out duration-200"
             key={index}
           >
-            <div className="w-full md:w-1/4 relative">
+            <div className="w-full md:w-1/4 relative h-60 md:h-auto">
               <a href={proj.link} referrerPolicy="no-referrer" target="_blank">
                 <Image
                   src={proj.imagePath}
@@ -74,7 +74,7 @@ export default function Projects() {
                 </a>
               </div>
               <p>{proj.desc}</p>
-              <div className="flex flex-row pt-3 flex-wrap space-x-1">
+              <div className="flex flex-row pt-3 flex-wrap space-x-1 space-y-1">
                 {proj.technologies.map((item, index) => (
                   <span
                     key={index}
