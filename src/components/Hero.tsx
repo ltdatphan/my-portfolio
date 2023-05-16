@@ -1,8 +1,9 @@
 "use client";
 import TextTransition, { presets } from "react-text-transition";
-import { useState, useEffect, MouseEventHandler } from "react";
+import { useState, useEffect } from "react";
 import Socials from "./Socials";
 import Link from "next/link";
+import handleScroll from "@/scripts/handleScroll";
 
 const greetings = [
   "Hello",
@@ -27,30 +28,14 @@ export default function Hero() {
     return () => clearTimeout(intervalId);
   }, []);
 
-  const handleScroll: MouseEventHandler = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    // first prevent the default behavior
-    e.preventDefault();
-    // get the href and remove everything before the hash (#)
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    // get the element by id and use scrollTo
-    var element = document.getElementById(targetId);
-    var headerOffset = 90;
-    var elementPosition = element?.getBoundingClientRect().top || 0;
-    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-  };
   return (
-    <section className="h-[70vh] md:h-[85vh] w-full md:max-w-3xl mx-auto px-4 py-10 mt-20 mb-40">
+    <section
+      className="h-[70vh] md:h-[85vh] w-full md:max-w-3xl mx-auto px-4 py-10 mt-20 mb-40"
+      id="top"
+    >
       <div className="flex flex-col h-full animate-fadeIn">
         <div className="text-3xl md:text-5xl font-bold flex flex-row font-serif mb-3 md:mb-6">
-          <TextTransition inline={true} springConfig={presets.gentle}>
+          <TextTransition inline={true} springConfig={presets.default}>
             {greetings[index % greetings.length]}
           </TextTransition>
           , I&#39;m David!

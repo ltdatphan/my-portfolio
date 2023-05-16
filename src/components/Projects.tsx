@@ -74,11 +74,11 @@ export default function Projects() {
                 </a>
               </div>
               <p>{proj.desc}</p>
-              <div className="flex flex-row pt-3 flex-wrap space-x-1 space-y-1">
+              <div className="flex flex-row flex-wrap text-sm gap-2">
                 {proj.technologies.map((item, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-teal-200 text-green-800 rounded-full text-sm"
+                    className="px-3 py-1 bg-teal-200 text-green-800 rounded-full"
                   >
                     {item}
                   </span>
