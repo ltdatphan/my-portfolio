@@ -38,6 +38,17 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    title: "David Phan | Portfolio",
+    description: "David Phan's Personal Portfolio",
+    images: [
+      {
+        url: "https://davidphan.dev/preview.webp",
+        width: 1200,
+        height: 600,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
