@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import NavBar from "@/components/NavBar";
+import SpotlightWrapper from "@/components/SpotlightWrapper";
 import Hero from "@/components/Hero";
 
 const DynamicExperience = dynamic(() => import("@/components/Experience"), {
@@ -15,11 +16,13 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="font-sans">
+      {/* <SpotlightWrapper> */}
       <NavBar />
       <Hero />
       <DynamicExperience />
       <DynamicProjects />
       <Footer />
+      {/* </SpotlightWrapper> */}
     </main>
   );
 }

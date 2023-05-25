@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities { .animation-delay-2000 { animation-delay: 2s; } .animation-delay-4000 { animation-delay: 4s; } }
 /* *:not(html) {
   border: 1px dashed red
 } */
@@ -99,4 +100,22 @@ p, h1, h2, h3, h4, h5, h6 {
   0% { opacity: 0; }
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
+}
+
+.blob-container {
+  position: relative;
+	width: 12em;
+	height: 12em;
+}
+
+.blob {
+  animation: moveR 8s linear infinite;
+	border-radius: 50%;
+	mix-blend-mode: screen;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 9em;
+	height: 9em;
+  background: hsl(3,90%,55%);
 }

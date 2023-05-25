@@ -30,10 +30,13 @@ export default function Hero() {
 
   return (
     <section
-      className="h-[70vh] md:h-[85vh] w-full md:max-w-3xl mx-auto px-4 py-10 mt-20 mb-40"
+      className="h-[100vh] md:h-[85vh] w-full md:max-w-3xl mx-auto px-4 py-10 overflow-hidden relative"
       id="top"
     >
-      <div className="flex flex-col h-full animate-fadeIn">
+      <div className="absolute top-60 md:top-80 -left-10 md:left-40 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+      <div className="absolute top-80 -right-20 md:right-20 w-80 h-80 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animation-delay-2000 animate-blob"></div>
+      <div className="absolute top-0 left-5 md:left-20 w-96 h-96 bg-teal-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animation-delay-4000 animate-blob"></div>
+      <div className="flex flex-col h-full animate-fadeIn mt-20">
         <div className="text-3xl md:text-5xl font-bold flex flex-row font-serif mb-3 md:mb-6">
           <TextTransition inline={true} springConfig={presets.default}>
             {greetings[index % greetings.length]}
@@ -47,12 +50,12 @@ export default function Hero() {
           </p>
           <Socials />
         </div>
-        <div className="h-full flex flex-col justify-end items-center">
+        <div className="h-2/4 md:h-2/3 flex flex-col justify-end items-center">
           <Link href="#experience" onClick={handleScroll}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
-              className="h-8 w-8 fill-gray-600 animate-bounce"
+              className="h-8 w-8 fill-gray-700 animate-bounce"
             >
               <path d="M233 407c13 12 33 12 46 0l192-192a32 32 0 0 0-46-46L256 339 87 169a32 32 0 0 0-46 46l192 192z" />
             </svg>

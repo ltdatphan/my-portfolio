@@ -28,17 +28,18 @@ export default function Experience() {
 
   return (
     <section
-      className={`h-[90vh] md:h-[85vh] w-full md:max-w-3xl mx-auto px-0 py-5 ${
+      className={`h-[100vh] md:h-[60vh] w-full md:max-w-3xl mx-auto px-0 py-5 relative overflow-hidden ${
         inView ? "animate-reveal" : "opacity-0"
       }`}
       id="experience"
       ref={ref}
     >
+      <div className="absolute top-40 md:top-15 -left-10 md:left-40 h-[24rem] w-[24rem] bg-gradient-to-bl from-teal-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10"></div>
       <h2 className="text-lg font-semibold px-3">Experience</h2>
       <div className="flex flex-col space-y-6">
         {job_detail.map((job, index) => (
           <div
-            className="group flex flex-row content-center justify-between hover:bg-stone-100 md:hover:shadow-lg md:hover:scale-105 hover:transition-all ease-in-out duration-200 p-3"
+            className="group flex flex-row content-center justify-between hover:transition-all ease-in-out duration-200 p-3 hover:bg-opacity-40 hover:backdrop-blur-lg hover:bg-gray-50 rounded hover:drop-shadow-xl border-2 border-transparent hover:border-stone-100"
             key={index}
           >
             <div className="w-1/4">

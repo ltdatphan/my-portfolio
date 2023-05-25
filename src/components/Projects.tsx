@@ -33,17 +33,19 @@ export default function Projects() {
 
   return (
     <section
-      className={`h-full w-full md:max-w-3xl mx-auto px-0 pb-10 ${
+      className={`h-full w-full md:max-w-3xl mx-auto px-0 pb-10 overflow-hidden relative ${
         inView ? "animate-reveal" : "opacity-0"
       }`}
       id="projects"
       ref={ref}
     >
+      <div className="absolute top-60 md:top-15 -right-40 md:right-20 h-[28rem] w-[28rem] bg-gradient-to-r from-pink-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10"></div>
+
       <h2 className="text-lg font-semibold px-3">Projects</h2>
       <div className="flex flex-col space-y-6">
         {jobs_detail.map((proj, index) => (
           <div
-            className="group flex flex-col md:flex-row content-center justify-between p-3 hover:bg-stone-100 md:hover:shadow-lg md:hover:scale-105 hover:transition-all ease-in-out duration-200"
+            className="group flex flex-col md:flex-row content-center justify-between hover:transition-all ease-in-out duration-200 p-3 hover:bg-amber-50 hover:bg-opacity-40 hover:backdrop-blur-lg rounded hover:drop-shadow-xl border-2 border-transparent hover:border-stone-100"
             key={index}
           >
             <div className="w-full md:w-1/4 relative h-60 md:h-auto">
@@ -74,7 +76,7 @@ export default function Projects() {
                 </a>
               </div>
               <p>{proj.desc}</p>
-              <div className="flex flex-row flex-wrap text-sm gap-2">
+              <div className="flex flex-row flex-wrap text-sm gap-2 mt-3">
                 {proj.technologies.map((item, index) => (
                   <span
                     key={index}
