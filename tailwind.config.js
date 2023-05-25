@@ -45,16 +45,28 @@ module.exports = {
           "100%": { opacity: "1" },
         },
         blob: {
-          "0%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
-          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
-          "100%": { transform: "tranlate(0px, 0px) scale(1)" },
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+            borderRadius: "40% 60% 70% 30% / 40% 40% 60% 50%",
+          },
+          "33%": {
+            transform: "translate(50px, -80px) scale(1.1)",
+            borderRadius: "70% 30% 50% 50% / 30% 30% 70% 70%",
+          },
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.9)",
+            borderRadius: "100% 60% 60% 100% / 100% 100% 60% 60%",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
+            borderRadius: "40% 60% 70% 30% / 40% 40% 60% 50%",
+          },
         },
       },
       animation: {
         reveal: "reveal 0.65s ease-in-out",
         fadeIn: "fadeIn 1.25s ease-in-out",
-        blob: "blob 10s infinite",
+        blob: "blob 12s infinite",
       },
     },
   },

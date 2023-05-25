@@ -39,13 +39,13 @@ export default function Projects() {
       id="projects"
       ref={ref}
     >
-      <div className="absolute top-60 md:top-15 -right-40 md:right-20 h-[28rem] w-[28rem] bg-gradient-to-r from-pink-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10"></div>
+      <div className="absolute top-[20rem] md:top-15 -right-50 md:right-20 h-[28rem] w-[28rem] bg-gradient-to-r from-pink-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10 animation-delay-4000"></div>
 
       <h2 className="text-lg font-semibold px-3">Projects</h2>
       <div className="flex flex-col space-y-6">
         {jobs_detail.map((proj, index) => (
           <div
-            className="group flex flex-col md:flex-row content-center justify-between hover:transition-all ease-in-out duration-200 p-3 hover:bg-amber-50 hover:bg-opacity-40 hover:backdrop-blur-lg rounded hover:drop-shadow-xl border-2 border-transparent hover:border-stone-100"
+            className="group flex flex-col md:flex-row content-center justify-between hover:transition-all ease-in-out duration-100 p-3 hover:bg-amber-50 hover:bg-opacity-40 hover:backdrop-blur-lg rounded hover:drop-shadow-xl border-2 border-transparent hover:border-stone-100"
             key={index}
           >
             <div className="w-full md:w-1/4 md:h-auto">

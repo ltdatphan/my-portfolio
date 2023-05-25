@@ -30,12 +30,12 @@ export default function Hero() {
 
   return (
     <section
-      className="h-[100vh] md:h-[85vh] w-full md:max-w-3xl mx-auto px-4 py-10 overflow-hidden relative animate-fadeIn"
+      className="h-[100vh] md:h-[85vh] w-full md:max-w-3xl mx-auto px-4 py-10 overflow-hidden relative "
       id="top"
     >
-      <div className="absolute top-60 md:top-80 -left-10 md:left-40 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-      <div className="absolute top-80 -right-20 md:right-20 w-80 h-80 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animation-delay-2000 animate-blob"></div>
-      <div className="absolute top-0 left-5 md:left-20 w-96 h-96 bg-teal-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animation-delay-4000 animate-blob"></div>
+      <div className="absolute top-60 md:top-80 -left-10 md:left-40 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10"></div>
+      <div className="absolute top-80 -right-20 md:right-20 w-80 h-80 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animation-delay-2000 animate-blob -z-10"></div>
+      <div className="absolute top-0 left-5 md:left-20 w-96 h-96 bg-teal-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animation-delay-4000 animate-blob -z-10"></div>
       <div className="flex flex-col h-full animate-fadeIn mt-20">
         <div className="text-3xl md:text-5xl font-bold flex flex-row font-serif mb-3 md:mb-6">
           <TextTransition inline={true} springConfig={presets.default}>

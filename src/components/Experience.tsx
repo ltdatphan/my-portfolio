@@ -34,12 +34,12 @@ export default function Experience() {
       id="experience"
       ref={ref}
     >
-      <div className="absolute top-40 md:top-15 -left-10 md:left-40 h-[24rem] w-[24rem] bg-gradient-to-bl from-teal-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10"></div>
+      <div className="absolute top-40 md:top-15 -left-10 md:left-40 h-[28rem] w-[28rem] bg-gradient-to-bl from-teal-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10"></div>
       <h2 className="text-lg font-semibold px-3">Experience</h2>
       <div className="flex flex-col space-y-6">
         {job_detail.map((job, index) => (
           <div
-            className="group flex flex-row content-center justify-between hover:transition-all ease-in-out duration-200 p-3 hover:bg-opacity-40 hover:backdrop-blur-lg hover:bg-gray-50 rounded hover:drop-shadow-xl border-2 border-transparent hover:border-stone-100"
+            className="group flex flex-row content-center justify-between hover:transition-all ease-in-out duration-100 p-3 hover:bg-opacity-40 hover:backdrop-blur-lg hover:bg-teal-50 rounded hover:drop-shadow-xl border-2 border-transparent hover:border-stone-100"
             key={index}
           >
             <div className="w-1/4">
