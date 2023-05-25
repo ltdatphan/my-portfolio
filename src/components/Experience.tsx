@@ -54,7 +54,8 @@ export default function Experience() {
                   referrerPolicy="no-referrer"
                   key={index}
                 >
-                  {job.title} • {job.company_name}
+                  {job.title} <br />{" "}
+                  <span className="font-light">{job.company_name}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"

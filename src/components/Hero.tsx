@@ -12,9 +12,9 @@ const greetings = [
   "Heya",
   "Wassup",
   "Bonjour",
-  "Yo",
   "Yoohoo",
   "Ciao",
+  "Xin chao",
 ];
 
 export default function Hero() {
@@ -30,7 +30,7 @@ export default function Hero() {
 
   return (
     <section
-      className="h-[100vh] md:h-[85vh] w-full md:max-w-3xl mx-auto px-4 py-10 overflow-hidden relative"
+      className="h-[100vh] md:h-[85vh] w-full md:max-w-3xl mx-auto px-4 py-10 overflow-hidden relative animate-fadeIn"
       id="top"
     >
       <div className="absolute top-60 md:top-80 -left-10 md:left-40 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -45,13 +45,16 @@ export default function Hero() {
         </div>
         <div className="flex flex-col text-lg md:text-xl font-regular space-y-6 md:space-y-10">
           <p>
-            I&#39;m a Software Developer 👨‍💻 <br /> & upcoming CS graduate at TMU
-            🎓
+            I&#39;m a Software Developer 👨‍💻 <br /> & CS graduate at TMU 🎓
           </p>
           <Socials />
         </div>
         <div className="h-2/4 md:h-2/3 flex flex-col justify-end items-center">
-          <Link href="#experience" onClick={handleScroll}>
+          <Link
+            href="#experience"
+            onClick={handleScroll}
+            aria-label="Button to go down"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"

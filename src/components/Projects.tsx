@@ -11,7 +11,7 @@ const jobs_detail = [
   },
   {
     name: "Smart Detection",
-    desc: "Face detection app that utilize Clarifai's AI model via their API. Created a responsive front-end using React. For back-end, utilize Express and PostgreSQL authenticate + store user's credentials. Front-end hosted on Github Pages. Back-end hosted on Heroku.",
+    desc: "Web app app that utilize Clarifai's AI model to calculate the location of human faces and outlines them. Created a responsive front-end using React. For back-end, utilize Express and PostgreSQL authenticate + store user's credentials. Front-end hosted on Github Pages. Back-end hosted on Heroku.",
     imagePath: "/smart-detection.webp",
     technologies: ["React", "Express", "PostgreSQL", "Github Pages", "Heroku"],
     link: "https://github.com/ltdatphan/smart-detection",
@@ -48,12 +48,19 @@ export default function Projects() {
             className="group flex flex-col md:flex-row content-center justify-between hover:transition-all ease-in-out duration-200 p-3 hover:bg-amber-50 hover:bg-opacity-40 hover:backdrop-blur-lg rounded hover:drop-shadow-xl border-2 border-transparent hover:border-stone-100"
             key={index}
           >
-            <div className="w-full md:w-1/4 relative h-60 md:h-auto">
-              <a href={proj.link} referrerPolicy="no-referrer" target="_blank">
+            <div className="w-full md:w-1/4 md:h-auto">
+              <a
+                href={proj.link}
+                referrerPolicy="no-referrer"
+                target="_blank"
+                className="block relative h-60 md:h-full"
+              >
                 <Image
                   src={proj.imagePath}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={proj.name}
+                  loading="lazy"
                   className="filter group-hover:saturate-200 group-hover:brightness-110 object-contain"
                 />
               </a>
