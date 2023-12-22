@@ -1,6 +1,9 @@
 export default function Socials() {
     return (
-        <div className="flex flex-row w-max content-center space-x-6 leading-1">
+        <div
+            className="flex flex-row w-max content-center space-x-6 leading-1"
+            aria-label="Social Media Links"
+        >
             <a
                 href="mailto:ltdatphan@gmail.com"
                 referrerPolicy="no-referrer"

@@ -4,14 +4,43 @@ import { useInView } from 'react-intersection-observer'
 const projects = [
     {
         name: 'MedSuite',
-        desc: "Hospital Management System used to store patients' info, book appointments, and keep track of hospital's medical supplies. Uses a NextJS front-end and Firebase for back-end. Worked in an Agile environment and utilized tools such as Jira, Github, Zoom, Discord to collaborate.",
+        shortDesc: 'Fullstack hospital management system',
+        // desc: "Hospital Management System used to store patients' info, book appointments, and keep track of hospital's medical supplies. Uses a NextJS front end and Firebase for back end as a service. Worked in an Agile environment and utilized tools such as Jira, Github, Zoom, Discord to collaborate.",
+        desc: [
+            'Developed a hospital management system to store patient’s information, schedule appointments and monitor medical supplies',
+            'Utilized Figma for mockups and implemented front end inside Next.js',
+            'Leveraged Firebase as back end for persistent data storage and authentication of users',
+            'Operated within an Agile environment, utilizing tools such as Jira, Discord and Zoom to collaborate effectively',
+            'Assisted members in solving blocked tasks, reviewing code and deploying the app',
+        ],
         imagePath: '/medsuite.webp',
-        technologies: ['NextJS', 'Firebase', 'Bootstrap', 'Netlify'],
-        link: 'https://github.com/ltdatphan/Hospital-Management-System',
+        technologies: ['Next.js', 'Firebase', 'TailwindCSS', 'Netlify'],
+        link: 'https://medsuite.netlify.app/',
+    },
+    {
+        name: 'Wikipedia Search Engine',
+        shortDesc: 'Search engine with front end',
+        // desc: "Created a search engine to search a subset of 10000 Wikipedia articles. Trained search model in Python using various algorithms to help predict relevant topics to provide results that best matches user's needs. Front-end is a small React app hosted on Netlify. Back-end is a Flask app hosted on Render.",
+        desc: [
+            'Created a web application that searches a subset of 10,000 Wikipedia documents',
+            'Utilize different information retrieval models to interpret search terms and return the most relevant results',
+            'Implemented front end in React and deployed on Netlify',
+            'Developed back end in Flask to handle search requests and deployed on Render',
+        ],
+        imagePath: '/search-engine-2.webp',
+        technologies: ['React', 'Flask', 'Netlify', 'Render'],
+        link: 'https://search-engine-cps842.netlify.app/',
     },
     {
         name: 'Smart Detection',
-        desc: "Web app app that utilize Clarifai's AI model to calculate the location of human faces and outlines them. Created a responsive front-end using React. For back-end, utilize Express and PostgreSQL authenticate + store user's credentials. Front-end hosted on Github Pages. Back-end hosted on Heroku.",
+        shortDesc: 'Fullstack face detection app',
+        // desc: "Web app app that utilize Clarifai's AI model to calculate the location of human faces and outlines them. Created a responsive front-end using React. For back-end, utilize Express and PostgreSQL authenticate + store user's credentials. Front-end hosted on Github Pages. Back-end hosted on Heroku.",
+        desc: [
+            'Created a web application that outlines human faces in images by leveraging Clarifai’s AI model',
+            'Implemented a responsive front end using React and Bootstrap',
+            'Developed an ExpressJS back end to interact with a PostgreSQL database that stores user information and hashed passwords using the bcrypt algorithm',
+            'Deployed front end on GitHub pages and back end on Heroku',
+        ],
         imagePath: '/smart-detection.webp',
         technologies: [
             'React',
@@ -22,19 +51,12 @@ const projects = [
         ],
         link: 'https://github.com/ltdatphan/smart-detection',
     },
-    {
-        name: 'Wikipedia Search Engine',
-        desc: "Created a search engine to search a subset of 10000 Wikipedia articles. Trained search model in Python using various algorithms to help predict relevant topics to provide results that best matches user's needs. Front-end is a small React app hosted on Netlify. Back-end is a Flask app hosted on Render.",
-        imagePath: '/search-engine.webp',
-        technologies: ['React', 'Flask', 'Netlify', 'Render'],
-        link: 'https://github.com/ltdatphan/search-engine',
-    },
 ]
 
 export default function Projects() {
     const { ref, inView } = useInView({
         triggerOnce: true,
-        rootMargin: '-10% 0%',
+        rootMargin: '-20% 0%',
     })
 
     return (
@@ -44,22 +66,38 @@ export default function Projects() {
             }`}
             id="projects"
             ref={ref}
+            aria-label="Projects"
         >
             {/* <div className="absolute top-40 md:top-15 -left-10 md:left-40 h-[28rem] w-[28rem] bg-gradient-to-bl from-teal-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob z-10"></div> */}
             <h2 className="text-xl font-semibold mb-12">Projects</h2>
             <ul className="group/list">
                 {projects.map((project, index) => (
                     <li className="mb-16" key={index}>
-                        <div className="group relative grid md:grid-cols-8 rounded lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md lg:block lg:group-hover:bg-slate-200/50 dark:lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                            <div className="md:col-span-2 z-10 relative mb-4 md:mr-4 h-48 w-full md:h-auto md:w-auto">
+                        <div
+                            className="group relative grid md:grid-cols-8 rounded lg:hover:!opacity-100 lg:group-hover/list:opacity-50 
+                            lg:transition-opacity lg:duration-200 lg:ease-in-out motion-reduce:transition-none"
+                        >
+                            <div
+                                className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md 
+                                lg:block lg:group-hover:bg-slate-200/50 
+                                dark:lg:group-hover:bg-slate-800/50 
+                                lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
+                                lg:group-hover:drop-shadow-lg
+                                lg:transition-all lg:duration-200 lg:ease-in-out motion-reduce:transition-none
+                                "
+                            ></div>
+                            <div
+                                className="md:col-span-2 z-10 mb-4 md:mr-4"
+                                aria-label={`${project.name} thumbnail`}
+                            >
                                 <Image
                                     src={project.imagePath}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: 'auto' }} // optional
                                     alt={project.name}
                                     loading="lazy"
-                                    className="object-contain"
                                 />
                             </div>
                             <div className="md:col-span-6 z-10">
@@ -68,9 +106,15 @@ export default function Projects() {
                                     target="_blank"
                                     referrerPolicy="no-referrer"
                                     key={index}
-                                    className="font-medium group-hover:text-teal-400 dark:group-hover:text-teal-400"
+                                    className="font-medium hover:text-teal-500 dark:hover:text-teal-400
+                                    transition-colors duration-200 ease-in-out motion-reduce:transition-none"
                                 >
-                                    <span>{project.name}</span>
+                                    <span className="block">
+                                        {project.name}
+                                    </span>
+                                    <span className="font-semibold text-neutral-500">
+                                        {project.shortDesc}
+                                    </span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 512 512"
@@ -80,8 +124,19 @@ export default function Projects() {
                                     </svg>
                                     <span className="absolute -inset-x-4 -inset-y-2.5 md:-inset-x-6 md:-inset-y-4 hidden rounded lg:block"></span>
                                 </a>
-                                <p className="mt-2">{project.desc}</p>
-                                <ul className="flex gap-2 mt-4 flex-wrap">
+                                {/* <p className="mt-2">{project.desc}</p> */}
+                                <ul
+                                    className="mt-2 list-disc list-inside"
+                                    aria-label="Project description"
+                                >
+                                    {project.desc.map((item, i) => (
+                                        <li key={i}>{item}</li>
+                                    ))}
+                                </ul>
+                                <ul
+                                    className="flex gap-2 mt-4 flex-wrap"
+                                    aria-label="Technologies used"
+                                >
                                     {project.technologies.map((tag, i) => (
                                         <li
                                             key={i}
@@ -97,71 +152,5 @@ export default function Projects() {
                 ))}
             </ul>
         </section>
-        // <section
-        //   className={`h-full w-full md:max-w-3xl mx-auto px-0 pb-10 overflow-hidden relative ${
-        //     inView ? "animate-reveal" : "opacity-0"
-        //   }`}
-        //   id="projects"
-        //   ref={ref}
-        // >
-        //   {/* <div className="absolute top-[20rem] md:top-15 -right-50 md:right-20 h-[28rem] w-[28rem] bg-gradient-to-r from-pink-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10 animation-delay-4000"></div> */}
-
-        //   <h2 className="text-lg font-semibold px-3">Projects</h2>
-        //   <div className="flex flex-col space-y-6">
-        //     {jobs_detail.map((proj, index) => (
-        //       <div
-        //         className="group flex flex-col md:flex-row content-center justify-between hover:transition-all ease-in-out duration-100 p-3 hover:bg-amber-50 hover:bg-opacity-40 hover:backdrop-blur-lg rounded hover:drop-shadow-xl border-2 border-transparent hover:border-stone-100"
-        //         key={index}
-        //       >
-        //         <div className="w-full md:w-1/4 md:h-auto">
-        //           <a
-        //             href={proj.link}
-        //             referrerPolicy="no-referrer"
-        //             target="_blank"
-        //             className="block relative h-60 md:h-full"
-        //           >
-        //             <Image
-        //               src={proj.imagePath}
-        //               fill
-        //               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        //               alt={proj.name}
-        //               loading="lazy"
-        //               className="filter group-hover:saturate-200 group-hover:brightness-110 object-contain"
-        //             />
-        //           </a>
-        //         </div>
-        //         <div className="pt-3 md:pt-0 md:w-2/3">
-        //           <div className="font-medium mb-3 group-hover:text-cyan-600 group-hover:underline">
-        //             <a
-        //               href={proj.link}
-        //               referrerPolicy="no-referrer"
-        //               target="_blank"
-        //             >
-        //               {proj.name}
-        //               <svg
-        //                 xmlns="http://www.w3.org/2000/svg"
-        //                 viewBox="0 0 512 512"
-        //                 className="h-3 w-3 inline ml-1 relative bottom-[0.08em] group-hover:fill-cyan-600"
-        //               >
-        //                 <path d="M352 0a32.1 32.1 0 0 0-22.7 54.7L370.7 96 201.4 265.4a32 32 0 0 0 45.3 45.3L416 141.3l41.4 41.4a32 32 0 0 0 54.7-22.7V32a32 32 0 0 0-32-32H352zM80 32a80 80 0 0 0-80 80v320a80 80 0 0 0 80 80h320a80 80 0 0 0 80-80V320a32 32 0 1 0-64 0v112a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V112a16 16 0 0 1 16-16h112a32 32 0 1 0 0-64H80z" />
-        //               </svg>
-        //             </a>
-        //           </div>
-        //           <p>{proj.desc}</p>
-        //           <div className="flex flex-row flex-wrap text-sm gap-2 mt-3">
-        //             {proj.technologies.map((item, index) => (
-        //               <span
-        //                 key={index}
-        //                 className="px-3 py-1 bg-teal-200 text-green-800 rounded-full"
-        //               >
-        //                 {item}
-        //               </span>
-        //             ))}
-        //           </div>
-        //         </div>
-        //       </div>
-        //     ))}
-        //   </div>
-        // </section>
     )
 }

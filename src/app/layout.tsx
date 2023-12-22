@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter, IBM_Plex_Serif } from 'next/font/google'
 import type { Metadata } from 'next'
 import Providers from '@/contexts/Providers'
+import Head from 'next/head'
 
 const inter = Inter({
     subsets: ['latin'],
@@ -22,15 +23,19 @@ export const metadata: Metadata = {
     generator: 'Next.js',
     applicationName: 'Next.js',
     referrer: 'origin-when-cross-origin',
-    keywords: ['Next.js', 'React', 'JavaScript'],
+    alternates: {
+        canonical: 'https://www.davidphan.dev/',
+    },
     icons: {
         icon: '/favicon.ico',
         apple: '/apple-touch-icon.png',
     },
     openGraph: {
         title: 'David Phan | Portfolio',
-        description: "David Phan's Personal Portfolio",
+        description:
+            'David Phan is a recent Computer Science graduate who is interested in Software Development.',
         url: 'https://davidphan.dev',
+        type: 'website',
         images: [
             {
                 url: 'https://davidphan.dev/preview.webp',
@@ -59,7 +64,6 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <head></head>
             <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
                 <Providers>{children}</Providers>
             </body>
