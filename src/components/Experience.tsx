@@ -51,7 +51,7 @@ export default function Experience() {
 
     return (
         <section
-            className={`h-max w-full md:max-w-3xl mx-auto px-4 py-5 relative overflow-hidden ${
+            className={`h-max w-full md:max-w-3xl mx-auto px-4 py-0 relative overflow-hidden ${
                 inView ? 'animate-reveal' : 'opacity-0'
             }`}
             id="experience"

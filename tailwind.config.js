@@ -57,25 +57,21 @@ module.exports = {
                     '100%': { opacity: '1' },
                 },
                 blob: {
-                    '0%': {
+                    '0%, 100%': {
                         transform: 'translate(0px, 0px) scale(1)',
                         borderRadius: '40% 60% 70% 30% / 40% 40% 60% 50%',
                     },
                     '25%': {
-                        transform: 'translate(20px, -40px) scale(1.1)',
-                        borderRadius: '70% 30% 50% 50% / 30% 30% 70% 70%',
+                        transform: 'translate(5px, -10px) scale(1.05)',
+                        borderRadius: '60% 40% 50% 50% / 40% 40% 60% 60%',
                     },
                     '50%': {
-                        transform: 'translate(-10px, 10px) scale(0.9)',
-                        borderRadius: '100% 60% 60% 100% / 100% 100% 60% 60%',
-                    },
-                    '75%': {
-                        transform: 'translate(10px, -20px) scale(1.1)',
-                        borderRadius: '70% 30% 50% 50% / 30% 30% 70% 70%',
-                    },
-                    '100%': {
                         transform: 'translate(0px, 0px) scale(1)',
                         borderRadius: '40% 60% 70% 30% / 40% 40% 60% 50%',
+                    },
+                    '75%': {
+                        transform: 'translate(-5px, 10px) scale(0.95)',
+                        borderRadius: '60% 40% 50% 50% / 40% 40% 60% 60%',
                     },
                 },
             },
@@ -83,7 +79,9 @@ module.exports = {
                 reveal: 'reveal 0.65s ease-in-out',
                 fadeIn: 'fadeIn 1.25s ease-in-out',
                 fadeInSlow: 'fadeIn 2s ease-in',
-                blob: 'blob 24s infinite',
+                blob: 'blob 8s infinite',
+                blobSlow: 'blob 24s infinite',
+                blobSlower: 'blob 48s infinite',
             },
         },
     },

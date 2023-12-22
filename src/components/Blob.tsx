@@ -8,8 +8,9 @@ const Blob = (props: props) => {
     return (
         <div
             className={`${props.className} absolute rounded-full mix-blend-multiply 
-             filter blur-xl animate-blob z-0 
-             dark:opacity-60 dark:mix-blend-hard-light`}
+             filter blur-xl z-0 
+             dark:opacity-60 dark:mix-blend-hard-light
+             motion-reduce:animate-none`}
         ></div>
     )
 }

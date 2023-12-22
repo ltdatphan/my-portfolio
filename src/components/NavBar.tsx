@@ -6,7 +6,7 @@ export default function NavBar() {
     return (
         <nav
             id="header"
-            className="sticky w-full top-0 z-20"
+            className="fixed w-full top-0 z-20"
             aria-labelledby="Navigation bar"
         >
             <div className="w-full h-14 md:h-20 bg-pale-white justify-center border-b border-gray-200 dark:bg-dark-grey dark:text-pale-white dark:border-gray-700">
