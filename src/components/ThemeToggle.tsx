@@ -65,6 +65,7 @@ const ThemeToggle = (props: Props) => {
     return (
         <span
             className="w-6 h-6 flex items-center"
+            role="button"
             aria-label="Toggle between dark and light mode"
         >
             {renderThemeChanger()}
