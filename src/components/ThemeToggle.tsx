@@ -5,7 +5,7 @@ type Props = {}
 
 const ThemeToggle = (props: Props) => {
     const [mounted, setMounted] = useState(false)
-    const { systemTheme, theme, setTheme } = useTheme()
+    const { setTheme, resolvedTheme } = useTheme()
 
     // useEffect only runs on the client, so now we can safely show the UI
     useEffect(() => {
@@ -19,9 +19,8 @@ const ThemeToggle = (props: Props) => {
     const renderThemeChanger = () => {
         if (!mounted) return <span className="w-6 h-6 flex items-center"></span>
 
-        const currentTheme = theme === 'system' ? systemTheme : theme
-
-        if (currentTheme === 'dark') {
+        // const currentTheme = theme === 'system' ? resolvedTheme : theme
+        if (resolvedTheme === 'dark') {
             return (
                 <svg
                     width="16"
