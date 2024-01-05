@@ -19,10 +19,11 @@ const ibmPlexSerif = IBM_Plex_Serif({
 
 export const metadata: Metadata = {
     title: 'David Phan | Portfolio',
-    description: "David Phan's Personal Portfolio",
+    description: `David Phan is a Software Developer who is a recent Toronto Metropolitan University grad and is interested in building meaningful software products.`,
     generator: 'Next.js',
     applicationName: 'Next.js',
     referrer: 'origin-when-cross-origin',
+    metadataBase: new URL('https://www.davidphan.dev'),
     alternates: {
         canonical: 'https://www.davidphan.dev/',
     },
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'David Phan | Portfolio',
         description:
-            'David Phan is a recent Computer Science graduate who is interested in Software Development.',
+            'David Phan is a Software Developer who is a recent Toronto Metropolitan University grad and is interested in building meaningful software products.',
         url: 'https://davidphan.dev',
         type: 'website',
         images: [
