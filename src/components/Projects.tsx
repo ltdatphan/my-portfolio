@@ -19,10 +19,10 @@ const projects = [
     },
     {
         name: 'Wikipedia Search Engine',
-        shortDesc: 'Search engine with front end',
+        shortDesc: 'Search engine with simple front end',
         // desc: "Created a search engine to search a subset of 10000 Wikipedia articles. Trained search model in Python using various algorithms to help predict relevant topics to provide results that best matches user's needs. Front-end is a small React app hosted on Netlify. Back-end is a Flask app hosted on Render.",
         desc: [
-            'Created a web application that searches a subset of 10,000 Wikipedia documents',
+            'Created a web application that searches a subset of 1,000 Wikipedia documents',
             'Utilize different information retrieval models to interpret search terms and return the most relevant results',
             'Implemented front end in React and deployed on Netlify',
             'Developed back end in Flask to handle search requests and deployed on Render',
@@ -36,10 +36,10 @@ const projects = [
         shortDesc: 'Fullstack face detection app',
         // desc: "Web app app that utilize Clarifai's AI model to calculate the location of human faces and outlines them. Created a responsive front-end using React. For back-end, utilize Express and PostgreSQL authenticate + store user's credentials. Front-end hosted on Github Pages. Back-end hosted on Heroku.",
         desc: [
-            'Created a web application that outlines human faces in images by leveraging Clarifai’s AI model',
-            'Implemented a responsive front end using React and Bootstrap',
+            'Created a web application that outlines human faces in images by leveraging Clarifai’s Face Recognition model',
+            'Implemented a responsive and user-friendly front end using React and Bootstrap',
             'Developed an ExpressJS back end to interact with a PostgreSQL database that stores user information and hashed passwords using the bcrypt algorithm',
-            'Deployed front end on GitHub pages and back end on Heroku',
+            'Deployed front end on GitHub pages and back end on Fly.io',
         ],
         imagePath: '/smart-detection.webp',
         technologies: [
@@ -47,9 +47,9 @@ const projects = [
             'Express',
             'PostgreSQL',
             'Github Pages',
-            'Heroku',
+            'Fly.io',
         ],
-        link: 'https://github.com/ltdatphan/smart-detection',
+        link: 'https://ltdatphan.github.io/smart-detection/',
     },
 ]
 
@@ -61,18 +61,35 @@ export default function Projects() {
 
     return (
         <section
-            className={`h-max w-full md:max-w-3xl mx-auto px-4 py-0 relative overflow-hidden ${
-                inView ? 'animate-reveal' : 'opacity-0'
-            }`}
+            className={`h-max w-full md:max-w-3xl mx-auto px-4 py-0 relative overflow-hidden`}
             id="projects"
             ref={ref}
             aria-label="Projects"
         >
             {/* <div className="absolute top-40 md:top-15 -left-10 md:left-40 h-[28rem] w-[28rem] bg-gradient-to-bl from-teal-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob z-10"></div> */}
-            <h2 className="text-xl font-semibold mb-12">Projects</h2>
+            <h2
+                className={`text-xl font-semibold mb-12 ${
+                    inView
+                        ? 'animate-slideInLeft motion-reduce:animate-none'
+                        : 'opacity-0'
+                }`}
+            >
+                Projects
+            </h2>
             <ul className="group/list">
                 {projects.map((project, index) => (
-                    <li className="mb-16" key={index}>
+                    <li
+                        className={`mb-16 ${
+                            inView
+                                ? 'animate-slideInLeft motion-reduce:animate-none'
+                                : 'opacity-0'
+                        }`}
+                        key={index}
+                        style={{
+                            animationDelay: `${index * 0.5}s`,
+                            animationFillMode: 'both',
+                        }}
+                    >
                         <div
                             className="group relative grid md:grid-cols-8 rounded lg:hover:!opacity-100 lg:group-hover/list:opacity-50 
                             lg:transition-opacity lg:duration-200 lg:ease-in-out motion-reduce:transition-none"

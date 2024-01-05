@@ -56,6 +56,14 @@ module.exports = {
                     '0%': { opacity: '0' },
                     '100%': { opacity: '1' },
                 },
+                slideInLeft: {
+                    '0%': {
+                        transform: 'translateX(-150%)',
+                    },
+                    '100%': {
+                        transform: 'translateX(0%)',
+                    },
+                },
                 blob: {
                     '0%, 100%': {
                         transform: 'translate(0px, 0px) scale(1)',
@@ -76,9 +84,10 @@ module.exports = {
                 },
             },
             animation: {
-                reveal: 'reveal 0.65s ease-in-out',
-                fadeIn: 'fadeIn 1.25s ease-in-out',
+                reveal: 'reveal 700ms ease-in',
+                fadeIn: 'fadeIn 750ms ease-in',
                 fadeInSlow: 'fadeIn 2s ease-in',
+                slideInLeft: 'slideInLeft 1.5s',
                 blob: 'blob 8s infinite',
                 blobSlow: 'blob 24s infinite',
                 blobSlower: 'blob 48s infinite',

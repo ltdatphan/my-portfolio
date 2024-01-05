@@ -51,17 +51,34 @@ export default function Experience() {
 
     return (
         <section
-            className={`h-max w-full md:max-w-3xl mx-auto px-4 py-0 relative overflow-hidden ${
-                inView ? 'animate-reveal' : 'opacity-0'
-            }`}
+            className={`h-max w-full md:max-w-3xl mx-auto px-4 py-0 relative overflow-hidden`}
             id="experience"
             ref={ref}
             aria-label="Work experience"
         >
-            <h2 className="text-xl font-semibold mb-12">Experience</h2>
+            <h2
+                className={`text-xl font-semibold mb-12 ${
+                    inView
+                        ? 'animate-slideInLeft motion-reduce:animate-none'
+                        : 'opacity-0'
+                }`}
+            >
+                Experience
+            </h2>
             <ul className="group/list">
                 {job_detail.map((job, index) => (
-                    <li className="mb-16" key={index}>
+                    <li
+                        className={`mb-16 ${
+                            inView
+                                ? 'animate-slideInLeft motion-reduce:animate-none'
+                                : 'opacity-0'
+                        }`}
+                        key={index}
+                        style={{
+                            animationDelay: `${index * 0.5}s`,
+                            animationFillMode: 'both',
+                        }}
+                    >
                         <div
                             className="group relative grid md:grid-cols-8 rounded lg:hover:!opacity-100 lg:group-hover/list:opacity-50
                             lg:transition-opacity lg:duration-200 lg:ease-in-out motion-reduce:transition-none"

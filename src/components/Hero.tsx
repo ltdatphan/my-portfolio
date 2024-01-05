@@ -39,7 +39,7 @@ export default function Hero() {
 
             <div className="flex flex-col h-full justify-between z-10">
                 <div className="mt-36">
-                    <h1 className="text-3xl md:text-5xl font-bold font-serif mb-3 md:mb-6 animate-fadeIn">
+                    <h1 className="text-3xl md:text-5xl font-bold font-serif mb-3 md:mb-6 animate-fadeIn motion-reduce:animate-none">
                         <span>
                             <TextTransition
                                 inline={true}
@@ -69,7 +69,7 @@ export default function Hero() {
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
-                            className="h-8 w-8 fill-gray-700 animate-bounce dark:fill-gray-200"
+                            className="h-8 w-8 fill-gray-700 animate-bounce motion-reduce:animate-none  dark:fill-gray-200"
                         >
                             <path d="M233 407c13 12 33 12 46 0l192-192a32 32 0 0 0-46-46L256 339 87 169a32 32 0 0 0-46 46l192 192z" />
                         </svg>
