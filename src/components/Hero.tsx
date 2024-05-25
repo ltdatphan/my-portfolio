@@ -39,13 +39,13 @@ export default function Hero() {
             <div className="absolute top-0 left-5 md:left-20 w-96 h-96 bg-teal-300 rounded-full mix-blend-multiply filter dark:mix-blend-hard-light blur-xl opacity-80 dark:opacity-60 animation-delay-4000 animate-blob z-10"></div> */}
 
             <div className="flex flex-col h-full justify-between z-10">
-                <div className="md:mt-36 grid grid-cols-1 md:grid-cols-2">
-                    <div className="flex-col h-full content-center order-last md:order-first animate-fadeIn motion-reduce:animate-none">
+                <div className="md:h-full grid grid-cols-1 md:grid-cols-2">
+                    <div className="mt-4 flex-col h-full content-center order-last md:order-first animate-fadeIn motion-reduce:animate-none">
                         <h1 className="text-4xl md:text-5xl font-serif mb-3 md:mb-6 ">
                             <span>
                                 <TextTransition
                                     inline={true}
-                                    springConfig={presets.default}
+                                    springConfig={presets.stiff}
                                     direction="up"
                                     delay={0}
                                 >
@@ -56,7 +56,7 @@ export default function Hero() {
                             <br />
                             <span>I&#39;m David!</span>
                         </h1>
-                        <h2 className="text-lg md:text-xl font-semibold mb-16">
+                        <h2 className="text-lg md:text-xl font-semibold mb-6]\ mb-4 md:mb-16">
                             <span>
                                 I&#39;m a Software Developer 👨‍💻 <br /> & CS
                                 graduate at TMU 🎓
@@ -64,24 +64,26 @@ export default function Hero() {
                         </h2>
                         <Socials />
                     </div>
-                    <div className="flex m-14 xs:m-8 sm:m-6 md:m-0 animate-fadeIn motion-reduce:animate-none'">
-                        <Image
-                            src={'/profile.webp'}
-                            width={0}
-                            height={0}
-                            alt={'Profile Image'}
-                            loading="lazy"
-                            sizes="100vw"
-                            // Make the image display full width
-                            style={{
-                                width: '100%',
-                                height: 'auto',
-                            }}
-                            className="brightness-100 dark:brightness-90 transform transition duration-125 hover:scale-105"
-                        />
+                    <div className=" mt-8 md:mt-0 flex justify-center content-center items-center">
+                        <div className="h-72 w-72 md:h-auto md:w-auto flex animate-fadeIn motion-reduce:animate-none'">
+                            <Image
+                                src={'/profile.webp'}
+                                width={0}
+                                height={0}
+                                alt={'Profile Image'}
+                                loading="lazy"
+                                sizes="100vw"
+                                // Make the image display full width
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                }}
+                                className="brightness-100 dark:brightness-90 transform transition duration-125 hover:scale-105"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div className="flex flex-col justify-end items-center">
+                <div className="flex flex-col justify-end items-center mb-12 md:mb-0">
                     <Link
                         href="#experience"
                         onClick={handleScroll}
@@ -90,7 +92,7 @@ export default function Hero() {
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
-                            className="h-8 w-8 fill-gray-700 animate-bounce motion-reduce:animate-none  dark:fill-gray-200"
+                            className="h-8 w-8 fill-gray-700 animate-bounce motion-reduce:animate-none dark:fill-gray-200"
                         >
                             <path d="M233 407c13 12 33 12 46 0l192-192a32 32 0 0 0-46-46L256 339 87 169a32 32 0 0 0-46 46l192 192z" />
                         </svg>
