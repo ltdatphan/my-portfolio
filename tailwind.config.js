@@ -64,6 +64,22 @@ module.exports = {
                         transform: 'translateX(0%)',
                     },
                 },
+                slideInRight: {
+                    '0%': {
+                        transform: 'translateX(150%)',
+                    },
+                    '100%': {
+                        transform: 'translateX(0%)',
+                    },
+                },
+                slideInUp: {
+                    '0%': {
+                        transform: 'translateY(150%)',
+                    },
+                    '100%': {
+                        transform: 'translateY(0%)',
+                    },
+                },
                 blob: {
                     '0%, 100%': {
                         transform: 'translate(0px, 0px) scale(1)',
@@ -88,12 +104,14 @@ module.exports = {
                 fadeIn: 'fadeIn 750ms ease-in',
                 fadeInSlow: 'fadeIn 2s ease-in',
                 slideInLeft: 'slideInLeft 1.5s',
+                slideInRight: 'slideInRight 1.5s',
+                slideInUp: 'slideInUp 1.5s',
                 blob: 'blob 8s infinite',
                 blobSlow: 'blob 24s infinite',
                 blobSlower: 'blob 48s infinite',
             },
         },
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
     darkMode: 'class',
 }

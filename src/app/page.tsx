@@ -2,8 +2,10 @@ import NavBar from '@/components/NavBar'
 import Hero from '@/components/Hero'
 import Footer from '@/components/Footer'
 import Blob from '@/components/Blob'
-import Experience from '@/components/Experience'
-import Projects from '@/components/Projects'
+// import Experience from '@/components/Experience'
+// import Projects from '@/components/Projects'
+import ExperienceDynamic from '@/components/ExperienceDynamic'
+import ProjectsDynamic from '@/components/ProjectsDynamic'
 
 export default function Home() {
     return (
@@ -13,8 +15,8 @@ export default function Home() {
             <Blob className="bg-teal-300 h-[300px] w-[450px] md:h-[450px] md:w-[550px] top-[0%] right-[50%] animate-blobSlower motion-reduce:animate-none" />
             <NavBar />
             <Hero />
-            <Experience />
-            <Projects />
+            <ExperienceDynamic />
+            <ProjectsDynamic />
             <Footer />
         </main>
     )
