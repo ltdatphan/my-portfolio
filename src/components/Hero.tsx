@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Socials from './Socials'
 import Link from 'next/link'
 import handleScroll from '@/scripts/handleScroll'
+import Image from 'next/image'
 
 const greetings = [
     'Hey',
@@ -30,7 +31,7 @@ export default function Hero() {
 
     return (
         <section
-            className="h-[90vh] w-full md:max-w-3xl mx-auto px-4 py-10 overflow-hidden relative "
+            className="h-screen w-full md:max-w-3xl mx-auto px-4 py-10 overflow-hidden relative "
             id="top"
         >
             {/* <div className="absolute top-60 md:top-60 -left-10 md:left-40 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply dark:mix-blend-hard-light filter blur-xl opacity-80 dark:opacity-60 animate-blob z-10"></div>
@@ -38,29 +39,49 @@ export default function Hero() {
             <div className="absolute top-0 left-5 md:left-20 w-96 h-96 bg-teal-300 rounded-full mix-blend-multiply filter dark:mix-blend-hard-light blur-xl opacity-80 dark:opacity-60 animation-delay-4000 animate-blob z-10"></div> */}
 
             <div className="flex flex-col h-full justify-between z-10">
-                <div className="mt-36">
-                    <h1 className="text-3xl md:text-5xl font-bold font-serif mb-3 md:mb-6 animate-fadeIn motion-reduce:animate-none">
-                        <span>
-                            <TextTransition
-                                inline={true}
-                                springConfig={presets.default}
-                                direction="up"
-                                delay={0}
-                            >
-                                {greetings[index % greetings.length]}
-                            </TextTransition>
-                            , I&#39;m David!
-                        </span>
-                    </h1>
-                    <h2 className="text-lg md:text-xl font-medium mb-16">
-                        <span>
-                            I&#39;m a Software Developer 👨‍💻 <br /> & CS graduate
-                            at TMU 🎓
-                        </span>
-                    </h2>
-                    <Socials />
+                <div className="md:mt-36 grid grid-cols-1 md:grid-cols-2">
+                    <div className="flex-col h-full content-center order-last md:order-first animate-fadeIn motion-reduce:animate-none">
+                        <h1 className="text-4xl md:text-5xl font-serif mb-3 md:mb-6 ">
+                            <span>
+                                <TextTransition
+                                    inline={true}
+                                    springConfig={presets.default}
+                                    direction="up"
+                                    delay={0}
+                                >
+                                    {greetings[index % greetings.length]}
+                                </TextTransition>
+                                ,
+                            </span>
+                            <br />
+                            <span>I&#39;m David!</span>
+                        </h1>
+                        <h2 className="text-lg md:text-xl font-semibold mb-16">
+                            <span>
+                                I&#39;m a Software Developer 👨‍💻 <br /> & CS
+                                graduate at TMU 🎓
+                            </span>
+                        </h2>
+                        <Socials />
+                    </div>
+                    <div className="flex m-14 xs:m-8 sm:m-6 md:m-0 animate-fadeIn motion-reduce:animate-none'">
+                        <Image
+                            src={'/profile.webp'}
+                            width={0}
+                            height={0}
+                            alt={'Profile Image'}
+                            loading="lazy"
+                            sizes="100vw"
+                            // Make the image display full width
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }}
+                            className="brightness-100 dark:brightness-90 transform transition duration-125 hover:scale-105"
+                        />
+                    </div>
                 </div>
-                <div className="flex flex-col justify-end items-center mb-28">
+                <div className="flex flex-col justify-end items-center">
                     <Link
                         href="#experience"
                         onClick={handleScroll}
