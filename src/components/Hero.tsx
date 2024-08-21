@@ -1,10 +1,10 @@
 'use client'
-import TextTransition, { presets } from 'react-text-transition'
-import { useState, useEffect } from 'react'
-import Socials from './Socials'
-import Link from 'next/link'
 import handleScroll from '@/scripts/handleScroll'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import TextTransition, { presets } from 'react-text-transition'
+import Socials from './Socials'
 
 const greetings = [
     'Hey',
@@ -56,10 +56,11 @@ export default function Hero() {
                             <br />
                             <span>I&#39;m David!</span>
                         </h1>
-                        <h2 className="text-lg md:text-xl font-semibold mb-6]\ mb-4 md:mb-16">
+                        <h2 className="text-lg md:text-xl font-semibold mb-6]\ mb-8 md:mb-16">
                             <span>
-                                I&#39;m a Software Developer 👨‍💻 <br /> & CS
-                                graduate at TMU 🎓
+                                I&#39;m a Software Developer 👨‍💻 <br />
+                                Interested in exploring new <br />
+                                Web Technologies 🌏
                             </span>
                         </h2>
                         <Socials />
@@ -71,7 +72,6 @@ export default function Hero() {
                                 width={0}
                                 height={0}
                                 alt={'Profile Image'}
-                                loading="lazy"
                                 sizes="100vw"
                                 // Make the image display full width
                                 style={{

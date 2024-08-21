@@ -4,7 +4,7 @@ import { Key } from 'react'
 import { format } from 'date-fns'
 import { IExperience } from '@/sanity/lib/interfaces'
 
-const QUERY = `*[_type == "experience"]{_id, role, company, url, startDate, endDate, content, tags}`
+const QUERY = `*[_type == "experience"]{_id, role, company, url, startDate, endDate, content, tags} | order(startDate desc)`
 
 export default async function ExperienceDynamic() {
     const experiences = await sanityFetch<IExperience[]>({ query: QUERY })
