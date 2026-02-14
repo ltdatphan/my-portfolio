@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="w-full h-14 md:h-20 bg-pale-white justify-center border-t border-gray-200 dark:bg-dark-grey dark:text-pale-white dark:border-gray-700">
                 <div className="h-full w-full md:max-w-3xl mx-auto px-4">
                     <div className="flex justify-between h-full items-center">
-                        &copy; 2024 - David Phan <Socials />
+                        &copy; 2026 - David Phan <Socials />
                     </div>
                 </div>
             </div>
